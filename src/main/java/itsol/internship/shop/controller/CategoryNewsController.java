@@ -1,4 +1,4 @@
-package itsol.internship.controller;
+package itsol.internship.shop.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;

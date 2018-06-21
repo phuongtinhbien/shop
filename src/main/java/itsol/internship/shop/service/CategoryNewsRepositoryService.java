@@ -1,7 +1,7 @@
-package itsol.internship.service;
+package itsol.internship.shop.service;
 
-import itsol.internship.model.CategoryNews;
-import itsol.internship.repository.CategoryNewsRepository;
+import itsol.internship.shop.model.CategoryNews;
+import itsol.internship.shop.repository.CategoryNewsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;

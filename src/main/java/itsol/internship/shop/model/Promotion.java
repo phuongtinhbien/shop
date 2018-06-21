@@ -1,4 +1,4 @@
-package itsol.internship.model;
+package itsol.internship.shop.model;
 
 import javax.persistence.*;
 import java.sql.Time;
