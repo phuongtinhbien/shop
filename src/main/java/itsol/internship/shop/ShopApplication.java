@@ -1,7 +1,6 @@
 package itsol.internship.shop;
 
 
-import java.util.Properties;
 
 import javax.sql.DataSource;
 
