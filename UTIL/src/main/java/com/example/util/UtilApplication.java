@@ -1,12 +1,12 @@
-package com.example.dao;
+package com.example.util;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DaoApplication {
+public class UtilApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DaoApplication.class, args);
+        SpringApplication.run(UtilApplication.class, args);
     }
 }
