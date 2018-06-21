@@ -33,7 +33,6 @@ public class Promotion {
     }
 
     @Id
-    @Basic
     @Column(name = "PROMOTION_CODE")
     public String getPromotionCode() {
         return promotionCode;
