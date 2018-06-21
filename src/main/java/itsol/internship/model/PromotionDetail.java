@@ -4,9 +4,8 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-public class Promotiondetail {
+public class PromotionDetail {
     private long promotionDetailId;
-    private String promotionCode;
     private String productCode;
     private Long quantity;
 
@@ -19,16 +18,6 @@ public class Promotiondetail {
 
     public void setPromotionDetailId(long promotionDetailId) {
         this.promotionDetailId = promotionDetailId;
-    }
-
-    @Basic
-    @Column(name = "PROMOTION_CODE")
-    public String getPromotionCode() {
-        return promotionCode;
-    }
-
-    public void setPromotionCode(String promotionCode) {
-        this.promotionCode = promotionCode;
     }
 
     @Basic
@@ -55,9 +44,8 @@ public class Promotiondetail {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Promotiondetail that = (Promotiondetail) o;
+        PromotionDetail that = (PromotionDetail) o;
         return promotionDetailId == that.promotionDetailId &&
-                Objects.equals(promotionCode, that.promotionCode) &&
                 Objects.equals(productCode, that.productCode) &&
                 Objects.equals(quantity, that.quantity);
     }
@@ -65,6 +53,6 @@ public class Promotiondetail {
     @Override
     public int hashCode() {
 
-        return Objects.hash(promotionDetailId, promotionCode, productCode, quantity);
+        return Objects.hash(promotionDetailId, productCode, quantity);
     }
 }

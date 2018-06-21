@@ -8,15 +8,12 @@ import java.util.Objects;
 public class News {
     private long newsId;
     private String newsCode;
-    private String categoryNewsCode;
     private String title;
     private String contentNews;
     private String imgCode;
     private boolean status;
     private Time createdDate;
-    private String staffCreate;
     private Time updatedDate;
-    private String staffUpdate;
     private Time fromDate;
     private Time toDate;
 
@@ -39,16 +36,6 @@ public class News {
 
     public void setNewsCode(String newsCode) {
         this.newsCode = newsCode;
-    }
-
-    @Basic
-    @Column(name = "CATEGORY_NEWS_CODE")
-    public String getCategoryNewsCode() {
-        return categoryNewsCode;
-    }
-
-    public void setCategoryNewsCode(String categoryNewsCode) {
-        this.categoryNewsCode = categoryNewsCode;
     }
 
     @Basic
@@ -102,16 +89,6 @@ public class News {
     }
 
     @Basic
-    @Column(name = "STAFF_CREATE")
-    public String getStaffCreate() {
-        return staffCreate;
-    }
-
-    public void setStaffCreate(String staffCreate) {
-        this.staffCreate = staffCreate;
-    }
-
-    @Basic
     @Column(name = "UPDATED_DATE")
     public Time getUpdatedDate() {
         return updatedDate;
@@ -119,16 +96,6 @@ public class News {
 
     public void setUpdatedDate(Time updatedDate) {
         this.updatedDate = updatedDate;
-    }
-
-    @Basic
-    @Column(name = "STAFF_UPDATE")
-    public String getStaffUpdate() {
-        return staffUpdate;
-    }
-
-    public void setStaffUpdate(String staffUpdate) {
-        this.staffUpdate = staffUpdate;
     }
 
     @Basic
@@ -159,14 +126,11 @@ public class News {
         return newsId == news.newsId &&
                 status == news.status &&
                 Objects.equals(newsCode, news.newsCode) &&
-                Objects.equals(categoryNewsCode, news.categoryNewsCode) &&
                 Objects.equals(title, news.title) &&
                 Objects.equals(contentNews, news.contentNews) &&
                 Objects.equals(imgCode, news.imgCode) &&
                 Objects.equals(createdDate, news.createdDate) &&
-                Objects.equals(staffCreate, news.staffCreate) &&
                 Objects.equals(updatedDate, news.updatedDate) &&
-                Objects.equals(staffUpdate, news.staffUpdate) &&
                 Objects.equals(fromDate, news.fromDate) &&
                 Objects.equals(toDate, news.toDate);
     }
@@ -174,6 +138,6 @@ public class News {
     @Override
     public int hashCode() {
 
-        return Objects.hash(newsId, newsCode, categoryNewsCode, title, contentNews, imgCode, status, createdDate, staffCreate, updatedDate, staffUpdate, fromDate, toDate);
+        return Objects.hash(newsId, newsCode, title, contentNews, imgCode, status, createdDate, updatedDate, fromDate, toDate);
     }
 }

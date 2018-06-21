@@ -5,14 +5,12 @@ import java.sql.Time;
 import java.util.Objects;
 
 @Entity
-public class Categorynews {
+public class CategoryNews {
     private long categoryNewsId;
     private String categoryNewsCode;
     private String categoryNewsName;
     private Time createdDate;
     private Time updatedDate;
-    private String staffCreate;
-    private String staffUpdate;
     private boolean status;
 
     @Basic
@@ -67,26 +65,6 @@ public class Categorynews {
     }
 
     @Basic
-    @Column(name = "STAFF_CREATE")
-    public String getStaffCreate() {
-        return staffCreate;
-    }
-
-    public void setStaffCreate(String staffCreate) {
-        this.staffCreate = staffCreate;
-    }
-
-    @Basic
-    @Column(name = "STAFF_UPDATE")
-    public String getStaffUpdate() {
-        return staffUpdate;
-    }
-
-    public void setStaffUpdate(String staffUpdate) {
-        this.staffUpdate = staffUpdate;
-    }
-
-    @Basic
     @Column(name = "STATUS")
     public boolean isStatus() {
         return status;
@@ -100,20 +78,18 @@ public class Categorynews {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Categorynews that = (Categorynews) o;
+        CategoryNews that = (CategoryNews) o;
         return categoryNewsId == that.categoryNewsId &&
                 status == that.status &&
                 Objects.equals(categoryNewsCode, that.categoryNewsCode) &&
                 Objects.equals(categoryNewsName, that.categoryNewsName) &&
                 Objects.equals(createdDate, that.createdDate) &&
-                Objects.equals(updatedDate, that.updatedDate) &&
-                Objects.equals(staffCreate, that.staffCreate) &&
-                Objects.equals(staffUpdate, that.staffUpdate);
+                Objects.equals(updatedDate, that.updatedDate);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(categoryNewsId, categoryNewsCode, categoryNewsName, createdDate, updatedDate, staffCreate, staffUpdate, status);
+        return Objects.hash(categoryNewsId, categoryNewsCode, categoryNewsName, createdDate, updatedDate, status);
     }
 }

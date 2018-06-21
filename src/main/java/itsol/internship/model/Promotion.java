@@ -1,9 +1,6 @@
 package itsol.internship.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+import javax.persistence.*;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Objects;
@@ -26,7 +23,6 @@ public class Promotion {
 
     @Basic
     @GeneratedValue
-
     @Column(name = "PROMOTION_ID")
     public long getPromotionId() {
         return promotionId;
@@ -36,6 +32,7 @@ public class Promotion {
         this.promotionId = promotionId;
     }
 
+    @Id
     @Basic
     @Column(name = "PROMOTION_CODE")
     public String getPromotionCode() {
